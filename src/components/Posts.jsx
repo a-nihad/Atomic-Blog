@@ -1,12 +1,10 @@
 import List from "./List";
 
-function Posts({ posts }) {
+function Posts() {
   return (
-    <ul>
-      {posts.map((post, i) => (
-        <List post={post} key={i} />
-      ))}
-    </ul>
+    <section>
+      <List />
+    </section>
   );
 }
 
