@@ -1,9 +1,9 @@
 import { useContext, useState } from "react";
 import Button from "./Button";
-import { PostContext } from "../App";
+import { usePost } from "./PostContext";
 
 function Archive() {
-  const { createRandomPost, onAddPost } = useContext(PostContext);
+  const { createRandomPost, onAddPost } = usePost();
   const [showArchive, setShowArchive] = useState(false);
   const [posts] = useState(() =>
     Array.from({ length: 200 }, () => createRandomPost())
